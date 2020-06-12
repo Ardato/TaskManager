@@ -1,13 +1,11 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState,useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 export const TaskListContest = createContext();
 
 const TaskListContestProvider = (props) => {
-  const [tasks, setTasks] = useState([
-    { title: "Read the book", id: 1 },
-    { title: "Wash  the car", id: 2 },
-    { title: "Write some code", id: 3 },
-  ]);
+  const initialStata = JSON.parse(localStorage.getItem('tasks'))|| []
+
+  const [tasks, setTasks] = useState(initialStata);
   const [editItem, setEdtItem] = useState(null);
   const addTask = (title) => {
     setTasks([
@@ -40,13 +38,25 @@ const TaskListContestProvider = (props) => {
           }
         : task
     );
-    setTasks(newTasks)
+    setTasks(newTasks);
   };
+
+    useEffect(()=>{
+      localStorage.setItem('tasks',JSON.stringify(tasks))
+    },[tasks])
 
   return (
     <div>
       <TaskListContest.Provider
-        value={{ tasks, addTask, removeTask, clearList, findItem ,editTask,editItem}}
+        value={{
+          tasks,
+          addTask,
+          removeTask,
+          clearList,
+          findItem,
+          editTask,
+          editItem,
+        }}
       >
         {props.children}
       </TaskListContest.Provider>

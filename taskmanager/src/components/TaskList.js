@@ -13,7 +13,10 @@ const TaskList = () => {
       })}
       </ul>
       ):(
-        <h1 className="no-tasks">No Tasks</h1>
+        <div >
+          <h1 className="no-tasks">No Tasks </h1>
+          <h1 className="no-tasks">Free Time:)</h1>
+        </div>
       )}
      
     </div>

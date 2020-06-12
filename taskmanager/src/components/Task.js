@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TaskListContest } from "../context/TaskListContest";
-const Task = ({ task ,id}) => {
+const Task = ({ task}) => {
   const {removeTask,findItem}=useContext(TaskListContest)
   return (
     <li className="list-item" >
