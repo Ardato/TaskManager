@@ -106,7 +106,7 @@
   font-size: 14px;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  outline: none;
+   outline: none; 
   cursor: pointer;
 }
 
@@ -170,3 +170,18 @@
   margin-top: 20px;
 }
 
+@media(max-width:500px){
+  .app-wrapper{
+    min-width: 300px;
+    height: 500px;
+  }
+  .task-input{
+    width: 250px;
+  }
+  .list{
+     overflow: hidden; 
+    overflow-y: auto;
+    max-height: 205px;
+}
+  
+}
