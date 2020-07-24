@@ -1,5 +1,5 @@
 # Introduction
-Onlin TaskManager.  
+Online TaskManager.  
 Link: https://ardato.github.io/TaskManager/
 
 
