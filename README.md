@@ -14,4 +14,9 @@ Link: https://ardato.github.io/TaskManager/
 - local storage
 
 
- 
+ ## Functionalities
+- add task
+- remove task
+- update task
+
+
